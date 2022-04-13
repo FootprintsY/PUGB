@@ -1,0 +1,616 @@
+@import "ripplr";
+body{
+  font: 12px/1.5 '\5FAE\8F6F\96C5\9ED1', tahoma, '\5b8b\4f53', sans-serif;
+  color: #666;
+  a{
+    color: #666;
+  }
+}
+//工具条
+.toolbar{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #c9c9c9;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1999;
+  .boolbar-in{
+    width: 970px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    li{
+      &:nth-child(1){
+        width: 200px;
+        height: 50px;
+        background: url("./../images/LoGo.png") no-repeat;
+        background-size:auto 100%;
+        position: absolute;
+        z-index: 999;
+        a{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &:nth-child(2){
+        .ad-small{
+          width: 200px;
+          height: 50px;
+          position: absolute;
+          left: 150px;
+        }
+        .ad-big{
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: none;
+        }
+      }
+      &:nth-child(2){
+        &:hover{
+          .ad-big{
+            display: block;
+          }
+        }
+      }
+      &:nth-child(3){
+        font-size: 14px;
+        line-height: 50px;
+        margin-left: 20px;
+        a:hover{
+          color: orange;
+        }
+      }
+      &:nth-child(4){
+        font-size: 14px;
+        line-height: 50px;
+        a:hover{
+          color: orange;
+        }
+      }
+    }
+  }
+}
+//导航条
+.nav {
+  width: 100%;
+  height: 88px;
+  background: url("./../images/bg_top.png");
+  position: fixed;
+  top: 51px;
+  left: 0;
+  z-index: 999;
+  .nav-in{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    h1{
+      position: absolute;
+      height: 100%;
+      top: 10px;
+      a{
+        display: inline-block;
+        width: 166px;
+        height: 60px;
+        line-height: 88;
+
+        background: url("./../images/logos.png") no-repeat;
+      }
+    }
+    ul{
+      margin-left: 160px;
+      li{
+        float: left;
+        width: 105px;
+        text-align: center;
+        line-height: 88px;
+        font-size: 16px;
+        font-weight: bold;
+        a:hover{
+          color: orange;
+        }
+        &:nth-child(3){
+          a{
+            color: orange;
+          }
+        }
+        &:nth-child(4){
+          a{
+            color: orange;
+          }
+        }
+      }
+    }
+    div{
+      float: right;
+      width: 140px;
+      height: 50px;
+      line-height: 50px;
+      background: orange;
+      margin-top: 20px;
+      text-align: center;
+      a{
+        font-weight: bold;
+        font-size: 16px;
+
+        color: white;
+      }
+    }
+  }
+}
+
+.center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.hcenter(){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+//第一屏
+.section-one{
+  background: url("./../images/bg_header.jpg") no-repeat center center;
+  background-size:cover ;
+  video{
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .play{
+    width: 81px;
+    height: 81px;
+    background: url("./../images/sprite.png") no-repeat 0 0;
+    .center();
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  img{
+    .hcenter();
+    bottom: 50px;
+  }
+
+}
+//第二屏
+.section-two{
+  background: url("./../images/bg_section1.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info{
+    height: 200px;
+    width: 540px;
+    background: url("./../images/sprite.png") no-repeat -248px -217px;
+    .center();
+    p{
+      position: absolute;
+      bottom: -30px;
+      color: white;
+      font-size: 20px;
+      font-style: italic;
+    }
+  }
+  .ripple{
+    position: absolute;
+    left: 56%;
+    top: 68%;
+  }
+}
+//第三屏
+.section-three{
+  background: url("./../images/bg_section2.jpg") no-repeat center center;
+  background-size: cover;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info1{
+    width: 540px;
+    height: 215px;
+    background: url("./../images/sprite.png") no-repeat -790px -217px;
+    .center();
+    p{
+      position: absolute;
+      bottom: -30px;
+      color: white;
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  .ripple{
+    position: absolute;
+    left: 56%;
+    top: 68%;
+  }
+}
+//第四屏
+ .section-four{
+   .top-four{
+     width: 727px;
+     height: 82px;
+     background: url("./../images/sprite.png") no-repeat 0px -420px;
+     .hcenter();
+     top: 20%;
+   }
+   .bottomleft-four{
+     position: absolute;
+     top: 70%;
+     left: 35%;
+     width: 200px;
+     text-align: center;
+     i{
+       display: inline-block;
+       width: 114px;
+       height: 78px;
+       background: url("./../images/sprite.png") no-repeat 0 -685px;
+       margin:0 auto;
+     }
+     b{
+       display: inline-block;
+       width: 100%;
+       height: 100%;
+       font-size: 20px;
+       color: #ffffff;
+     }
+     span{
+       display: inline-block;
+       width: 10px;
+       border: 1px solid #ffffff;
+       margin-bottom: 5px;
+     }
+     p{
+       color: #ffffff;
+       font-size: 16px;
+     }
+   }
+   .bottomright-four{
+     position: absolute;
+     top: 70%;
+     right: 35%;
+     width: 200px;
+     text-align: center;
+     i{
+       display: inline-block;
+       width: 114px;
+       height: 78px;
+       background: url("./../images/sprite.png") no-repeat -115px -766px;
+       margin:0 auto;
+     }
+     b{
+       display: inline-block;
+       width: 100%;
+       height: 100%;
+       font-size: 20px;
+       color: #e39501;
+     }
+     span{
+       display: inline-block;
+       width: 10px;
+       border: 1px solid #e39501;
+       margin-bottom: 5px;
+     }
+     p{
+       color: #e39501;
+       font-size: 16px;
+     }
+   }
+   ul{
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     li{
+       width: 33%;
+       height: 100%;
+       float: left;
+       transition: all 0.5s ease-in-out 0s;
+       position: relative;
+       overflow: hidden;
+       img{
+         position: absolute;
+         height: 100%;
+         top: 0;
+         transition: all 2s ease-in-out 0.3s;
+         opacity: 0.6;
+       }
+       h3{
+         width: 93px;
+         height: 68px;
+         background: url("./../images/sprite.png") no-repeat -238px -685px;
+         .center();
+         transition: all 2s ease-in-out 0.3s;
+
+       }
+       &:nth-child(1){
+
+         img{
+           left: -220px;
+         }
+       }
+       &:nth-child(2){
+         width: 34%;
+         height: 100%;
+         img{
+
+         }
+       }
+       &:nth-child(3){
+        img{
+          right: -290px;
+        }
+       }
+     }
+   }
+ }
+ //第五屏
+.section-five{
+  width: 100%;
+  height: 100%;
+  background: url("./../images/bg_section4.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info2{
+    width: 500px;
+    height: 200px;
+    .center();
+    div:nth-child(1){
+      float: left;
+      width: 370px;
+      height: 82px;
+      background: url("./../images/sprite.png") no-repeat 0 -510px;
+    }
+    div:nth-child(2){
+      margin-top: 10px;
+      float: right;
+      width: 380px;
+      height: 82px;
+      background: url("./../images/sprite.png") no-repeat -370px -510px;
+    }
+    p{
+      position: absolute;
+      font-size: 18px;
+      color: white;
+      bottom: 0;
+    }
+
+  }
+  .ripple{
+    position: absolute;
+    bottom:18%;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}
+//第六屏
+.section-six{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("./../images/bg_section5.jpg") no-repeat center center;
+  background-size: cover;
+  .info3{
+    position: absolute;
+    width: 750px;
+    height: 85px;
+    background: url("./../images/sprite.png") no-repeat 0 -595px;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    p{
+      position: absolute;
+      color: white;
+      font-size: 16px;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .ripple{
+    top: 40%;
+    left: 35%;
+  }
+  div:nth-child(3){
+    position: absolute;
+    top: 63%;
+    left: 59%;
+  }
+  .one{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+
+  }
+  &:hover{
+    .two{
+      display: block;
+    }
+  }
+  .two{
+    position: absolute;
+    top: 45%;
+    left:45%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+  }
+}
+//第七屏
+.footer-in{
+  width: 1200px;
+  height: 160px;
+  margin: 0 auto;
+  padding-top: 10px;
+  .foot-left{
+    position: relative;
+    div{
+      position: absolute;
+      left: 10px;
+      bottom: -100px;
+      width: 200px;
+      height: 35px;
+      background: url("./../images/foot-dark.png") no-repeat center center;
+    }
+    div:nth-child(2){
+      width: 200px;
+      height: 80px;
+      left: 250px;
+      top: 40px;
+      background: url("./../images/nav_spr.png") no-repeat -600px -160px;
+      position: absolute;
+      bottom: -100px;
+    }
+  }
+  .foot-right{
+    float: right;
+    font-size: 15px;
+    line-height: 30px;
+
+  }
+}
+//菜单
+#myMenu{
+  background: url("./../images/menu.png") no-repeat;
+  width: 32px;
+  height: 940px;
+  position: fixed;
+  left: 20px;
+  top: 160px;
+  z-index: 99;
+  display: none;
+  li{
+    position: absolute;
+    left: 31px;
+    width: 20px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+    a{
+      line-height: 50px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      i{
+        margin-left: 15px;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        border-top: 10px solid transparent;
+        border-left: 10px solid #e39501;
+        border-bottom: 10px solid transparent;
+
+      }
+      div{
+        width: 170px;
+        height: 50px;
+        line-height: 30px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        color: white;
+      }
+    }
+    &:nth-child(2){
+      top: 35px;
+      a{
+        div{
+          background: url("./../images/sprite.png") no-repeat -110px 0px;
+        }
+      }
+    }
+    &:nth-child(3){
+      top: 240px;
+      a{
+        div{
+          background: url("./../images/sprite.png") no-repeat -280px 0px;
+        }
+      }
+    }
+    &:nth-child(4){
+      top: 445px;
+      a{
+        div{
+          background: url("./../images/sprite.png") no-repeat -450px 0px;
+        }
+      }
+    }
+    &:nth-child(5){
+      top: 650px;
+      a{
+        div{
+          background: url("./../images/sprite.png") no-repeat -620px 0px;
+        }
+      }
+    }
+    &:nth-child(6){
+      top: 860px;
+      a{
+        div{
+          background: url("./../images/sprite.png") no-repeat -790px 0px;
+        }
+      }
+    }
+    &.active{
+      width: 315px;
+      a{
+        color: #e39501;
+      }
+    }
+    &:hover{
+      width: 315px;
+      a{
+        color: #e39501;
+      }
+    }
+  }
+  .menu-up,.menu-down{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 2px;
+    display: block;
+  }
+  .menu-up{
+    top: 0;
+  }
+  .menu-down{
+    bottom: 0;
+  }
+}
+.mouse{
+  width: 25px;
+  height: 80px;
+  position: absolute;
+  background: url("./../images/sprite.png") no-repeat -85px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  z-index: 999;
+}
+
